@@ -214,5 +214,13 @@
 
 
 .article_div {
-    min-height: 500px;
+    min-height: 300px;
+}
+
+.user_info h4,.user_info h5,.user_info h3 {
+    display: inline-block;
+}
+
+.thin_h4 {
+    font-weight: 300;
 }

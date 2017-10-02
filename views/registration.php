@@ -36,9 +36,13 @@
                   
                <div class="input-field">
                    <i class="material-icons prefix blue-text text-darken-4">photo</i>
-                   <input class="validate color_border_none" accept="image/jpeg,image/png"  type="file" id="Photo" name="photo" required>
+                   <input class="validate color_border_none" accept="image/jpeg,image/png"  type="file" id="Photo" name="photo">
                    
-               </div>
+               </div>/
+                 /
+                 //
+                 
+                 /
                   
                    <p>
                        <button class="waves-effect waves-light btn blue darken-4" type="submit">
