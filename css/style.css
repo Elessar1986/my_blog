@@ -197,9 +197,10 @@
 }
 
 .color_border_none {
-/*         border-bottom: none !important;*/
+   border-bottom-color: darkgrey; 
      -webkit-box-shadow: none !important; 
      box-shadow: none !important; 
+    
 }
 
 .article_group_header_2 {
@@ -211,3 +212,7 @@
 }
 }
 
+
+.article_div {
+    min-height: 500px;
+}

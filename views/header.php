@@ -1,14 +1,18 @@
+<?php
+    require "includes/config.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   
-  <meta name="keywords" content="Ivan Arepjev Арепьев Иван начинающий программист c# .net junior developer front-end wpf php"/>
+  <meta name="keywords" content="Ivan Arepjev Арепьев Иван blog блог c# .net junior developer front-end wpf php"/>
   
   <meta name="description" content="I'm a beginner developer, basically I'm working on the C # / .NET framework, but I'm also interested in front-end. On this site you can see my achievements and projects, and also learn more about me."/>
   
-  <title>Ivan Arepjev / Blog</title>
+  <title><?php echo $config['title']; ?></title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,7 +26,7 @@
       <div class=" indigo darken-4 border_bottom">
         <div class="row margin_botom_zero">
             <div class="col s3 offset-s2 m3 offset-m1 l3 offset-l1">
-                <a href="index.html" class="logo_main"></a>
+                <a href="/" class="logo_main"></a>
             </div>
             <div class="col s3 offset-s4 m2 offset-m2 l2 offset-l2">
                 <p></p>
@@ -35,8 +39,8 @@
     <div class="nav-wrapper">
 
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Регистрация</a></li>
+        <li><a href="/">Главная</a></li>
+        <li><a href="reg.php">Регистрация</a></li>
         <li><a href="#">Инфо</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
