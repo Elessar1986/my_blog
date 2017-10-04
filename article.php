@@ -6,9 +6,9 @@ require_once "model/db_engine.php";
 if(isset($_GET['id'])) {
     $id = htmlentities(strip_tags(trim($_GET['id'])));
 
-    addViewToArticle($dblink, $id);
+    addViewToArticle($id);
 
-    $art = getArticleById($dblink, $id);
+    $art = getArticleById($id);
 
     include_once "views/header.php";
 

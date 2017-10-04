@@ -6,52 +6,71 @@
                <h3 class="article_group_header">Регистрация</h3>
            </div>
            <div class="row">
-               <form action="" class="container col s6 offset-s3">
+               <form action="reg.php?action=registration" method="post" class="container col s6 offset-s3" id="reg_form" enctype="multipart/form-data">
                    
                 <div class="input-field">
                    <i class="material-icons prefix blue-text text-darken-4">account_circle</i>
-                   <input class="validate color_border_none" pattern="[A-Z,a-z,А-Я,а-я, ]*" type="text" id="Login" name="login" required autofocus>
+                   <input class="validate color_border_none" pattern="[A-Z,a-z,А-Я,а-я,0-9 ]*" type="text" id="Login" name="login" required autofocus>
                    <label data-error="не правильно" data-success="правильно" for="Name" class="">Логин...</label>
-                   <span class="hide right red-text">Такой логин уже существует</span>
+                   <span class="hide right red-text" id="wrong_login">Такой логин уже существует</span>
                </div>
                
                <div class="input-field">
                    <i class="material-icons prefix blue-text text-darken-4">email</i>
                    <input class="validate color_border_none"  type="email" id="Email" name="email" required>
                    <label data-error="не правильно" data-success="правильно" for="Email" class="">Ваш e-mail...</label>
+                   <span class="hide right red-text" id="wrong_email">Такой E-Mail уже существует</span>
                </div>
                
                
                <div class="input-field ">
                     <i class="material-icons prefix blue-text text-darken-4">lock</i>
                     <input class="validate color_border_none" type="password" id="Password" name="password" required>
-                   <label data-error="не правильно" data-success="правильно" for="Password" class="">Пароль...</label>
+                   <label  for="Password" class="">Пароль...</label>
                </div>
                   
                   <div class="input-field ">
                     <i class="material-icons prefix blue-text text-darken-4">lock</i>
                     <input class="validate color_border_none" type="password" id="Password1" name="password1" required>
-                   <label data-error="не правильно" data-success="правильно" for="Password1" class="">Пароль еще раз...</label>
+                   <label  for="Password1" class="">Пароль еще раз...</label>
+                      <span class="hide right red-text" id="wrong_pas">Пароль не совпадает</span>
                </div>
                   
                <div class="input-field">
                    <i class="material-icons prefix blue-text text-darken-4">photo</i>
                    <input class="validate color_border_none" accept="image/jpeg,image/png"  type="file" id="Photo" name="photo">
                    
-               </div>/
-                 /
-                 //
-                 
-                 /
-                  
+               </div>
                    <p>
-                       <button class="waves-effect waves-light btn blue darken-4" type="submit">
+                       <button id="reg_button" class="waves-effect waves-light btn blue darken-4" type="submit">
                           Регистрация
                       </button>
                   </p>
                </form>
                
            </div>
+<!--           <div class="hide row" id="reg_accept">-->
+<!--               <div class="col l6 offset-l3 m12">-->
+<!--                   <div class="card">-->
+<!--                       <h4>На ваш емайл было выслано письмо с кодом для подтверждения вашей почты. Введите этот код в поле ниже и нажмите кнопку.</h4>-->
+<!--                       <form action="" class="container" id="reg_accept_form">-->
+<!---->
+<!--                            <div class="input-field">-->
+<!--                               <i class="material-icons prefix blue-text text-darken-4">lock</i>-->
+<!--                               <input class="validate color_border_none" type="text" id="Accept_code" name="accept_code" required autofocus>-->
+<!--                               <label  for="Accept_code" class="">Код подтверждения...</label>-->
+<!--                                <p>-->
+<!--                                   <button id="reg_button" class="waves-effect waves-light btn blue darken-4" type="submit">-->
+<!--                                      Подтвердить-->
+<!--                                  </button>-->
+<!--                              </p>-->
+<!--                           </div>-->
+<!--                       </form>-->
+<!--                   </div>-->
+<!--               </div>-->
+<!--           </div>-->
       </div> 
     </div>
 </div>
+
+<script src="js/registration.js"></script>

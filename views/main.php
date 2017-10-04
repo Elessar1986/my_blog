@@ -5,19 +5,14 @@
            <div class="card green darken-2 white-text">
                <h3 class="article_group_header">Популярное</h3>
            </div>
+           <?php foreach ($top_art as $ta){ ?>
            <div class="card">
-               <h3 class="blue-text text-darken-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-               <h5 class="blue-text text-darken-4">Понедельник 20.11.2017 / 20:33</h5>
-               <p><img src="../img/coding.jpg" alt="" class="responsive-img article_img">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, nemo ipsum ratione pariatur, quibusdam corporis, repellat esse tempore voluptatum excepturi quam architecto. Fugiat illum velit tenetur excepturi et maiores voluptates necessitatibus magnam aut illo magni natus expedita vitae fuga, suscipit laborum corporis! Praesentium iusto incidunt ducimus quod, commodi, dolor aliquid nulla consectetur adipisci dicta impedit! </p>
-               <div class="article_open"><a href="article.php"><h4 class="blue-text text-darken-4">Подробнее</h4></a></div>
+               <h3 class="blue-text text-darken-4"><?=$ta['title']?></h3>
+               <h5 class="blue-text text-darken-4"><?=$ta['pubdate']?></h5>
+               <p><img src="../img/<?=$ta['img']?>" alt="" class="responsive-img article_img"><?=articles_intro($ta['text'])?></p>
+               <div class="article_open"><a href="article.php?id=<?=$ta['id']?>"><h4 class="blue-text text-darken-4">Подробнее</h4></a></div>
            </div>
-           
-           <div class="card">
-               <h3 class="blue-text text-darken-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-               <h5 class="blue-text text-darken-4">Понедельник 20.11.2017 / 20:33</h5>
-               <p><img src="../img/resources.png" alt="" class="responsive-img article_img">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, nemo ipsum ratione pariatur, quibusdam corporis, repellat esse tempore voluptatum excepturi quam architecto. Fugiat illum velit tenetur excepturi et maiores voluptates necessitatibus magnam aut illo magni natus expedita vitae fuga, suscipit laborum corporis! Praesentium iusto incidunt ducimus quod, commodi, dolor aliquid nulla consectetur adipisci dicta impedit! </p>
-               <div class="article_open"><a href="#"><h4 class="blue-text text-darken-4">Подробнее</h4></a></div>
-           </div>
+           <?php } ?>
            
        </div>
        
@@ -68,7 +63,7 @@
               Login
           </button></p>
            </form>
-    </div>
+        </div>
     
     <div id="personal_info_div" class="card-panel z-depth-3">
            <a href="#">
