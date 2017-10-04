@@ -43,7 +43,7 @@ function getUserCountByLogin( $login){
     return $users;
 }
 
-function addNonAceptedUser($login, $password, $email, $photo = '')
+function addNonAceptedUser($login, $password, $email, $photo = 'meIcon.png')
 {
     $password = password_hash($password, PASSWORD_DEFAULT);
     $activation_code = password_hash($email . $login, PASSWORD_DEFAULT);

@@ -31,12 +31,6 @@
                <div class="article_open"><a href="article.php?id=<?=$a['id']?>"><h4 class="blue-text text-darken-4">Подробнее</h4></a></div>
            </div>
            <?php }?>
-<!--           <div class="card">-->
-<!--               <h3 class="blue-text text-darken-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>-->
-<!--               <h5 class="blue-text text-darken-4">Понедельник 20.11.2017 / 20:33</h5>-->
-<!--               <p><img src="../img/bookcase-resources.jpg" alt="" class="responsive-img article_img">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, nemo ipsum ratione pariatur, quibusdam corporis, repellat esse tempore voluptatum excepturi quam architecto. Fugiat illum velit tenetur excepturi et maiores voluptates necessitatibus magnam aut illo magni natus expedita vitae fuga, suscipit laborum corporis! Praesentium iusto incidunt ducimus quod, commodi, dolor aliquid nulla consectetur adipisci dicta impedit! Tenetur eum vero similique sed maxime voluptate repudiandae accusamus doloribus, iure, nulla praesentium asperiores, odio assumenda modi cumque ex, laborum sequi. Est voluptas adipisci sit, illo fuga. Quidem optio suscipit odio commodi dolorum, ipsa laborum recusandae? Cumque repudiandae fuga dolor eaque assumenda laudantium aliquam natus.</p>-->
-<!--               <div class="article_open"><a href="#"><h4 class="blue-text text-darken-4">Подробнее</h4></a></div>-->
-<!--           </div>-->
     
 
     </div>
@@ -44,6 +38,7 @@
    
     
    <div class="col l3 hide-on-med-and-down">
+
        <div id="login_div" class="card-panel z-depth-3">
            <div class="card   yellow darken-3 white-text">
                <h3 class="article_group_header">Войти</h3>
@@ -64,8 +59,25 @@
           </button></p>
            </form>
         </div>
+
+       <div id="load_img" class="card-panel z-depth-3">
+           <div class="card   yellow darken-3 white-text">
+               <h3 class="article_group_header">Войти</h3>
+           </div>
+           <form action="loadimg.php" method="post" enctype="multipart/form-data">
+
+                   <i class="material-icons prefix blue-text text-darken-4">photo</i>
+                   <input class=" color_border_none" accept="image/jpeg,image/png"  type="file" name="userfile">
+
+
+
+               <p><button class="waves-effect waves-light btn blue darken-4" type="submit">
+                       Login
+                   </button></p>
+           </form>
+       </div>
     
-    <div id="personal_info_div" class="card-panel z-depth-3">
+    <div id="personal_info_div" class="card-panel z-depth-3 hide">
            <a href="#">
                <div class="card   yellow darken-3 white-text">
                <h3 class="article_group_header_2">Личный кабинет</h3>

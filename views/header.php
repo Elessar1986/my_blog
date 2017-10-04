@@ -54,7 +54,7 @@
        <li><a href="#">Войти</a></li>
        <li><a href="#">Личный кабинет</a></li>
         <li><a href="#">Главная</a></li>
-        <li><a href="#">Регистрация</a></li>
+        <li><a href="reg.php">Регистрация</a></li>
         <li><a href="#">Инфо</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>

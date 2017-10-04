@@ -9,13 +9,14 @@
             <div class="row" id="reg_accept">
                 <div class="col l6 offset-l3 m12">
                     <div class="card">
-                        <h4>На ваш емайл было выслано письмо с ссылкой для подтверждения вашей почты.</h4>
+                        <h4>
+                            Поздравляю, <?=$login?>! Вы успешно зарегистрировались на "Ivan Arepjev / Blog"
+                        </h4>
 
                     </div>
+                    <a href="/"> <button id="to_main" class="waves-effect waves-light btn blue darken-4">На главную</button></a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<script src="js/registration.js"></script>

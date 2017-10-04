@@ -15,6 +15,13 @@
                 </div>
             </div>
             <?php } ?>
+            <? if($activation) {?>
+            <a href="/"> <button id="to_main" class="waves-effect waves-light btn blue darken-4">На главную</button></a>
+            <? }else { ?>
+            <button id="reg_back" class="waves-effect waves-light btn blue darken-4">Назад</button>
+            <? } ?>
         </div>
     </div>
 </div>
+
+<script src="js/registration.js"></script>
