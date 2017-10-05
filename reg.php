@@ -7,13 +7,14 @@ include_once "views/header.php";
 
 if(isset($_POST) && $_GET['action'] == 'registration'){
 
+
     $login = htmlentities(strip_tags(trim($_POST["login"])));
     $password = htmlentities(strip_tags(trim($_POST["password"])));
     $email = htmlentities(strip_tags(trim($_POST["email"])));
     $password1 = htmlentities(strip_tags(trim($_POST["password1"])));
     if(isset($_POST['photo']))     {$userfile = $_POST['photo'];}
     if(isset($_POST['submit']))     {$submit = $_POST['submit'];}
-    if(isset($_FILES)) {
+    if(($_FILES['photo']['error'] == 0 && $_FILES['photo']['size'] > 0)) {
         $filename = $_FILES['photo']['name'];
         $sizefile = getimagesize($_FILES['photo']['tmp_name']);
         $size = filesize($_FILES['photo']['tmp_name'])/1024;
@@ -21,9 +22,9 @@ if(isset($_POST) && $_GET['action'] == 'registration'){
         $upload_path = "static/img/";
         if(isset($filename)){
             move_uploaded_file( $_FILES['photo']['tmp_name'], $upload_path.$filename);
-            echo "<p>Файл <strong>".$filename."</strong> успешно загружен</p>";
+            //echo "<p>Файл <strong>".$filename."</strong> успешно загружен</p>";
         }else {
-            echo "<p>Файл <strong>".$filename."</strong>  не загружен</p>";
+            //echo "<p>Файл <strong>".$filename."</strong>  не загружен</p>";
         }
         $new_name = "img_".date("YmdHis").".jpg";
         rename($upload_path.$filename, $upload_path.$new_name);
@@ -56,7 +57,11 @@ if(isset($_POST) && $_GET['action'] == 'registration'){
     }
     else {
         //echo "444";
-        addNonAceptedUser($login, $password, $email);
+        if(isset($filename)){
+            addNonAceptedUser($login, $password, $email, $filename );
+        }else {
+            addNonAceptedUser($login, $password, $email);
+        }
         include_once "views/reg_accept.php";
     }
 
