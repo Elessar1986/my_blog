@@ -189,7 +189,7 @@
 }
 
 .ava_img {
-    float: right;
+    float: left;
     margin: 5px;
     width: 30%;
     height: auto;
@@ -221,9 +221,6 @@
     display: inline-block;
 }
 
-.thin_h4 {
-    font-weight: 300;
-}
 
 .Errors_registration_form{
     font-family: "Cinematografica";
@@ -231,4 +228,8 @@
     line-height: 90%;
     /*margin: 0.9rem 0 0.912rem 0;*/
     color: red;
+}
+
+.exit_button:hover {
+    cursor: pointer;
 }

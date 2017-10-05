@@ -9,7 +9,7 @@
             <div class="row" id="reg_accept">
                 <div class="col l6 offset-l3 m12">
                     <div class="card">
-                        <h4><?=$e?></h4>
+                        <h4 class="red-text"><?=$e?></h4>
 
                     </div>
                 </div>

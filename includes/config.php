@@ -8,12 +8,6 @@ define('MYSQL_DB_NAME','test_blog');
 
     $config = array(
         'title' => 'Ivan Arepjev / Blog',
-        'test' => 'test text!'
-//        'bd' => array(
-//            'server' => 'localhost',
-//            'user' => 'root',
-//            'password' => '',
-//            'database' => 'test_blog'
-//        )
+
 
     );

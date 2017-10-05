@@ -9,7 +9,7 @@
            <div class="card">
                <h3 class="blue-text text-darken-4"><?=$ta['title']?></h3>
                <h5 class="blue-text text-darken-4"><?=$ta['pubdate']?></h5>
-               <p><img src="../img/<?=$ta['img']?>" alt="" class="responsive-img article_img"><?=articles_intro($ta['text'])?></p>
+               <p><img src="../img/<?=$ta['img']?>" alt="" class="responsive-img article_img"><?=articles_intro($ta['text'], 100)."...";?></p>
                <div class="article_open"><a href="article.php?id=<?=$ta['id']?>"><h4 class="blue-text text-darken-4">Подробнее</h4></a></div>
            </div>
            <?php } ?>
@@ -39,63 +39,42 @@
     
    <div class="col l3 hide-on-med-and-down">
 
-       <div id="login_div" class="card-panel z-depth-3">
-           <div class="card   yellow darken-3 white-text">
-               <h3 class="article_group_header">Войти</h3>
-           </div>
-           <form action="">
-               <div class="input-field ">
-                   <i class="material-icons prefix blue-text text-darken-4">account_circle</i>
-                   <input class="validate invalid color_border_none" pattern="[A-Z,a-z,А-Я,а-я, ]*" type="text" id="Login" name="login" required>
-                   <label data-error="wrong" data-success="right" for="Name" class="">Login...</label>
-               </div>
-               <div class="input-field ">
-                <i class="material-icons prefix blue-text text-darken-4">lock</i>
-                <input class="validate invalid color_border_none" type="password" id="Password" name="password" required>
-               <label data-error="wrong" data-success="right" for="Password" class="">Password...</label>
-               </div>
-               <p><button class="waves-effect waves-light btn blue darken-4" type="submit">
-              Login
-          </button></p>
-           </form>
-        </div>
 
-       <div id="load_img" class="card-panel z-depth-3">
-           <div class="card   yellow darken-3 white-text">
-               <h3 class="article_group_header">Войти</h3>
-           </div>
-           <form action="loadimg.php" method="post" enctype="multipart/form-data">
-
-                   <i class="material-icons prefix blue-text text-darken-4">photo</i>
-                   <input class=" color_border_none" accept="image/jpeg,image/png"  type="file" name="userfile">
+       <?php if(!$log_user) { ?>
+            <?php include_once "login_form.php"; ?>
+        <? } ?>
 
 
+<!--       <div id="load_img" class="card-panel z-depth-3">-->
+<!--           <div class="card   yellow darken-3 white-text">-->
+<!--               <h3 class="article_group_header">Войти</h3>-->
+<!--           </div>-->
+<!--           <form action="loadimg.php" method="post" enctype="multipart/form-data">-->
+<!---->
+<!--                   <i class="material-icons prefix blue-text text-darken-4">photo</i>-->
+<!--                   <input class=" color_border_none" accept="image/jpeg,image/png"  type="file" name="userfile">-->
+<!---->
+<!---->
+<!---->
+<!--               <p><button class="waves-effect waves-light btn blue darken-4" type="submit">-->
+<!--                       Login-->
+<!--                   </button></p>-->
+<!--           </form>-->
+<!--       </div>-->
 
-               <p><button class="waves-effect waves-light btn blue darken-4" type="submit">
-                       Login
-                   </button></p>
-           </form>
-       </div>
-    
-    <div id="personal_info_div" class="card-panel z-depth-3 hide">
-           <a href="#">
-               <div class="card   yellow darken-3 white-text">
-               <h3 class="article_group_header_2">Личный кабинет</h3>
-           </div>
-           </a>
-           <div class="user_info">
-              <img src="../img/meIcon.png" alt="" class="responsive-img ava_img">
-               <p><h4>Login:</h4>
-               <h4 class="thin_h4">login</h4></p>
-               <p><h4>e-Mail:</h4>
-               <h5>e-mail</h5></p>
-               <p><h4>IP:</h4>
-               <h5><?php echo $_SERVER['REMOTE_ADDR']?></h5></p>
-           </div>
-           
-    </div>
+
+    <?php if($log_user){ ?>
+        <?php include_once "personal_info.php"; ?>
+       <?php } ?>
+
+       <?php if($log_admin){ ?>
+           <?php include_once "admin_bar.php"; ?>
+       <?php } ?>
+
    </div>
    
 
 
 </div>
+
+<script src="js/main.js"></script>

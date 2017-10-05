@@ -32,10 +32,28 @@ function getArticleById($id){
 
 function addViewToArticle($id){
 
-    $art = R::findOne( 'articles', "id = ?", array( $id));
-    $art->views = $art->views + 1;
-    R::store($art);
-    return true;
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])){
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    }
+    elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }
+    else{
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+    $res = R::count( 'views', 'ip = ? AND article_id = ?', array($ip, $id));
+    if($res == 0){
+        $view = R::dispense('views');
+        $view->article_id = $id;
+        $view->ip = $ip;
+        R::store($view);
+        $art = R::findOne( 'articles', "id = ?", array( $id));
+        $art->views = $art->views + 1;
+        R::store($art);
+        return true;
+    }else{
+        return false;
+    }
 }
 
 function getUserCountByLogin( $login){

@@ -12,7 +12,7 @@
                        <li></li>
                    </ul>
                </div>
-               <form action="reg.php?action=registration" method="post" class="container col l6 offset-l3 s12" id="reg_form" enctype="multipart/form-data">
+               <form class="container col l6 offset-l3 s12" id="reg_form" method="post" action="reg.php" enctype="multipart/form-data">
                    
                 <div class="input-field">
                    <i class="material-icons prefix blue-text text-darken-4">account_circle</i>
