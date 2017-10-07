@@ -3,6 +3,9 @@
            <div class="card   yellow darken-3 white-text">
                <h3 class="article_group_header">Войти</h3>
            </div>
+            <div class="login_error">
+
+            </div>
            <form method="post" id="login_form">
                <div class="input-field ">
                    <i class="material-icons prefix blue-text text-darken-4">account_circle</i>

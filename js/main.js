@@ -5,7 +5,8 @@ $(".back_button").click(function () {
 });
 
 
-$("#exit_button").click(function () {
+$(".exit_button").click(function () {
+    alert("Exit");
     $.post(
         "/model/login.php",
         { "exit" : "1"},

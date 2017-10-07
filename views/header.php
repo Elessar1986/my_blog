@@ -51,12 +51,20 @@
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-       <li><a href="#">Войти</a></li>
+
+       <?php if(!isset($_SESSION['logined_user'])){ ?>
+       <li><a href="m_login.php">Войти</a></li>
+          <? } ?>
+
+          <?php if(isset($_SESSION['logined_user'])){ ?>
+              <li><a href=""><p class="exit_button">Выход</p></a></li>
+          <? } ?>
        <li><a href="#">Личный кабинет</a></li>
         <li><a href="/">Главная</a></li>
         <li><a href="reg.php">Регистрация</a></li>
         <li><a href="#">Инфо</a></li>
         <li><a href="#">Контакты</a></li>
+
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>

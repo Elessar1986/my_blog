@@ -3,7 +3,7 @@
 $("#login_form").submit(function () {
 
     var form_data = $("#login_form").serialize();
-
+    $(".login_error").html("");
     $.post(
         "/model/login.php",
         form_data,
@@ -12,7 +12,7 @@ $("#login_form").submit(function () {
                 // alert("Login done!");
                 location.reload();
             }else{
-                alert("Wrong pas or log!");
+                $(".login_error").html("<p class='red-text'>Неправильный логин или пароль</p>");
             }
         },
         "json"

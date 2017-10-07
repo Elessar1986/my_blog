@@ -196,6 +196,13 @@
     border: 1px solid;
 }
 
+.ava_img_comment {
+    float: left;
+    margin: 5px;
+    width: 70%;
+    height: auto;
+}
+
 .color_border_none {
    border-bottom-color: darkgrey; 
      -webkit-box-shadow: none !important; 
@@ -232,4 +239,12 @@
 
 .exit_button:hover {
     cursor: pointer;
+}
+
+.comment_item_marg{
+    margin-bottom: 2px;
+}
+
+.comment_item{
+
 }

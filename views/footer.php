@@ -46,6 +46,7 @@
   <script src="../js/materialize.js"></script>
   <script src="../js/init.js"></script>
   <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
   <!-- uSocial -->
 <script async src="https://usocial.pro/usocial/usocial.js?v=6.1.4" data-script="usocial" charset="utf-8"></script>
 <div class="uSocial-Share" data-pid="856919c163c07afeec1762e202e8470c" data-type="share" data-options="round-rect,style3,default,right,slide-down,size32,eachCounter0,counter1,counter-after" data-social="fb,lin,gPlus,twi,email" data-mobile="vi,wa,telegram,sms"></div>

@@ -45,24 +45,6 @@
         <? } ?>
 
 
-<!--       <div id="load_img" class="card-panel z-depth-3">-->
-<!--           <div class="card   yellow darken-3 white-text">-->
-<!--               <h3 class="article_group_header">Войти</h3>-->
-<!--           </div>-->
-<!--           <form action="loadimg.php" method="post" enctype="multipart/form-data">-->
-<!---->
-<!--                   <i class="material-icons prefix blue-text text-darken-4">photo</i>-->
-<!--                   <input class=" color_border_none" accept="image/jpeg,image/png"  type="file" name="userfile">-->
-<!---->
-<!---->
-<!---->
-<!--               <p><button class="waves-effect waves-light btn blue darken-4" type="submit">-->
-<!--                       Login-->
-<!--                   </button></p>-->
-<!--           </form>-->
-<!--       </div>-->
-
-
     <?php if($log_user){ ?>
         <?php include_once "personal_info.php"; ?>
        <?php } ?>
@@ -77,4 +59,4 @@
 
 </div>
 
-<script src="js/main.js"></script>
+<!--<script src="js/main.js"></script>-->
