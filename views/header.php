@@ -3,7 +3,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
@@ -16,7 +16,8 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<!--  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
     <script
@@ -44,10 +45,10 @@
     <div class="nav-wrapper">
 
       <ul class="right hide-on-med-and-down">
-        <li><a href="/">Главная</a></li>
-        <li><a href="reg.php">Регистрация</a></li>
-        <li><a href="#">Инфо</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="/"><h5>Главная</h5></a></li>
+        <li><a href="reg.php"><h5>Регистрация</h5></a></li>
+        <li><a href="#"><h5>Инфо</h5></a></li>
+        <li><a href="#"><h5>Контакты</h5></a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">

@@ -3,14 +3,20 @@
   <div class="col l3 m4 s12">
        <div class="card-panel z-depth-3">
            <div class="card green darken-2 white-text">
-               <h3 class="article_group_header">Популярное</h3>
+               <h4 class="article_group_header">Популярное</h4>
            </div>
            <?php foreach ($top_art as $ta){ ?>
            <div class="card">
-               <h3 class="blue-text text-darken-4"><?=$ta['title']?></h3>
-               <h5 class="blue-text text-darken-4"><?=$ta['pubdate']?></h5>
-               <p><img src="../img/<?=$ta['img']?>" alt="" class="responsive-img article_img"><?=articles_intro($ta['text'], 100)."...";?></p>
-               <div class="article_open"><a href="article.php?id=<?=$ta['id']?>"><h4 class="blue-text text-darken-4">Подробнее</h4></a></div>
+               <h5 class="blue-text text-darken-4"><?=$ta['title']?></h5>
+               <h6 class="blue-text text-darken-4"><?=$ta['pubdate']?></h6>
+               <p><img src="<?=$ta['img']?>" alt="" class="responsive-img article_img_min"><?=articles_intro($ta['text'], 100)."...";?></p>
+               <div class="row">
+                   <div class=" right-align">
+                       <a href="article.php?id=<?=$ta['id']?>">
+                           <h6 class="blue-text text-darken-4">Подробнее</h6>
+                       </a>
+                   </div>
+               </div>
            </div>
            <?php } ?>
            
@@ -21,14 +27,20 @@
    <div class="col l6 m8 s12">
        <div class="card-panel z-depth-3">
            <div class="card  red darken-2 white-text">
-               <h3 class="article_group_header">Последние новости</h3>
+               <h4 class="article_group_header">Последние новости</h4>
            </div>
            <?php foreach ($articles as $a){ ?>
            <div class="card">
-               <h3 class="blue-text text-darken-4"><?=$a['title']?></h3>
-               <h5 class="blue-text text-darken-4"><?=$a['pubdate']?></h5>
-               <p><img src="../img/<?=$a['img']?>" alt="" class="responsive-img article_img"><?=articles_intro($a['text'])?></p>
-               <div class="article_open"><a href="article.php?id=<?=$a['id']?>"><h4 class="blue-text text-darken-4">Подробнее</h4></a></div>
+               <h4 class="blue-text text-darken-4"><?=$a['title']?></h4>
+               <h6 class="blue-text text-darken-4"><?=$a['pubdate']?></h6>
+               <p><img src="<?=$a['img']?>" alt="" class="responsive-img article_img"><?=articles_intro($a['text'])?></p>
+               <div class="row">
+                   <div class=" right-align">
+                       <a href="article.php?id=<?=$a['id']?>">
+                           <h5 class="blue-text text-darken-4">Подробнее</h5>
+                       </a>
+                   </div>
+               </div>
            </div>
            <?php }?>
     

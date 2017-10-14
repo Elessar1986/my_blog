@@ -5,13 +5,13 @@
 
            <div class="card article_div">
                <div class="row">
-                   <h3 class="blue-text text-darken-4"><?=$art['title']?></h3>
+                   <h1 class="blue-text text-darken-4"><?=$art['title']?></h1>
                <h5 class="blue-text text-darken-4"><?=$art['pubdate']?></h5>
-               <p><img src="../img/<?=$art['img']?>" alt="" class="responsive-img article_img"><?=$art['text']?></p>
+               <p><img src="<?=$art['img']?>" alt="" class="responsive-img article_img"><?=$art['text']?></p>
                </div>
                 <div class="row">
-                    <div class="col l2 s2 m2"><div class="article_open"><a href="/"><h4 class="blue-text text-darken-4 back_button">Назад</h4></a></div></div>
-                    <div class="col l2 offset-l8"><p>Просмотров: <?=$art['views']?></p></div>
+                    <div class="col l6 m4 s6"><a href="/"><h4 class="blue-text text-darken-4 back_button">Назад</h4></a></div>
+                    <div class="col l4 offset-l2 m4 offset-m3 s6"><p>Просмотров: <?=$art['views']?></p></div>
                 </div>
            </div>
 
@@ -67,6 +67,49 @@
                </div>
 
            </div>
+
+           <?php if(!$log_user) { ?>
+               <div class="card light-green lighten-5">
+                   <div class="container">
+                       <div class="row">
+                           <div class="card-panel">
+                               <h4>Комментарии могут оставлять только зарегистрированные пользователи!</h4>
+                               <a href="reg.php"><h5 class="">Регистрация</h5></a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+
+           <? } ?>
+
+
+           <?php if($log_user){ ?>
+               <div class="card light-green lighten-5">
+                   <div class="container">
+                       <div class="row">
+                           <form action="">
+
+                               <div class="input-field">
+                                   <textarea name="comment" id="Comment" class="materialize-textarea"></textarea>
+                                   <label for="Comment">Your comment here...</label>
+                               </div>
+                               <button id="reg_button" class="waves-effect waves-light btn blue darken-4" type="submit">
+                                   Отправить комментарий
+                               </button>
+
+                           </form>
+
+                       </div>
+                   </div>
+               </div>
+           <?php } ?>
+
+           <?php if($log_admin){ ?>
+
+           <?php } ?>
+
+
+           
 
            <div class="card">
                

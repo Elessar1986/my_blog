@@ -3,24 +3,24 @@
 
     require_once "registration_engine.php";
 
-function getAllArticles(){
+function getAllArticles($num = 5){
 
-    $art = R::find( 'articles', 'ORDER BY id DESC LIMIT 5');
+    $art = R::find( 'articles', "ORDER BY id DESC LIMIT $num");
 
     return $art;
 
 }
 
-function getTopArticles(){
+function getTopArticles($num = 5){
 
-    $art = R::find( 'articles', 'ORDER BY views DESC LIMIT 5');
+    $art = R::find( 'articles', "ORDER BY views DESC LIMIT $num");
 
     return $art;
 
 }
 
     function articles_intro($text, $len = 520){
-        return mb_substr($text,0, $len);
+        return mb_substr(strip_tags($text),0, $len);
     }
 
 function getArticleById($id){
@@ -28,6 +28,15 @@ function getArticleById($id){
     $art = R::findOne( 'articles', "id = ?", array( $id));
     return $art;
 
+}
+
+function addArticle($title, $content, $pubdate, $img){
+    $article = R::dispense('articles');
+    $article->title = $title;
+    $article->text = $content;
+    $article->pubdate = $pubdate;
+    $article->img = $img;
+    R::store($article);
 }
 
 function addViewToArticle($id){

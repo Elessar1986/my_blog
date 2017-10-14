@@ -10,9 +10,9 @@ function saveMinPhotoToServer(){
     $upload_path = "static/img/";
     if (isset($filename)) {
         move_uploaded_file($_FILES['photo']['tmp_name'], $upload_path . $filename);
-        echo "<p>Файл <strong>".$filename."</strong> успешно загружен</p>";
+        //echo "<p>Файл <strong>".$filename."</strong> успешно загружен</p>";
     } else {
-        echo "<p>Файл <strong>".$filename."</strong>  не загружен</p>";
+        //echo "<p>Файл <strong>".$filename."</strong>  не загружен</p>";
     }
     $new_name = "img_" . date("YmdHis") . ".jpg";
     rename($upload_path . $filename, $upload_path . $new_name);
@@ -27,10 +27,10 @@ function saveMinPhotoToServer(){
         require_once "includes/tumbmaker.php";
 
         if (img_resize("static/img/$filename", "static/img/crop/$smallfoto", $smwidth, $smheight)){
-            echo "<p>Масштабирование прошло успешно</p>";
+            //echo "<p>Масштабирование прошло успешно</p>";
         }
         else {
-            echo "<p>Ошибка обрезки фото</p>";
+            //echo "<p>Ошибка обрезки фото</p>";
         }
     }
     else {

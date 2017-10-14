@@ -8,7 +8,7 @@
 
            <div class="row">
                <div class="Errors_registration_form container">
-                   <ul id="errors_list">
+                   <ul class="center-align ul_error" id="errors_list">
                        <li></li>
                    </ul>
                </div>

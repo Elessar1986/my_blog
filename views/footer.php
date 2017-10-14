@@ -1,7 +1,7 @@
 <footer class="page-footer  indigo darken-4">
     <div class="container">
       <div class="row">
-        <div class="col l6 m6 s12">
+        <div class="col l6 m6 s5">
           <h4 class="white-text">Ivan Arepjev</h4>
           <ul>
             <li><a class="white-text" href="index.html">Home</a></li>
@@ -9,14 +9,14 @@
             <li><a class="white-text" href="resources.html" target="_blank">Resources</a></li>
             <li><a class="white-text" href="https://github.com/Elessar1986/">My Github</a></li>
             <li><a class="white-text" href="aboutmy.html">About me</a></li>
-            <li><a class="white-text" href="#">Blog</a></li>
+            <li><a class="white-text" href="/">Blog</a></li>
             <li><a class="white-text" href="contact.html">Contact</a></li>
           </ul>
 
 
         </div>
 
-        <div class="col  l3 offset-l3 m6 s12">
+        <div class="col right-align l6 m6 s7">
           <h4 class="white-text">Contacts:</h4>
           <ul>
             <li><a class="white-text" >+3 8097 321 94 12</a></li>

@@ -1,7 +1,7 @@
 
     <div id="login_div" class="card-panel z-depth-3">
-           <div class="card   yellow darken-3 white-text">
-               <h3 class="article_group_header">Войти</h3>
+           <div class="card yellow darken-3 white-text">
+               <h4 class="article_group_header">Войти</h4>
            </div>
             <div class="login_error">
 
@@ -17,11 +17,11 @@
                 <input class="validate invalid color_border_none" type="password" id="Password" name="password" required>
                <label data-error="wrong" data-success="right" for="Password" class="">Password...</label>
                </div>
-               <p><button class="waves-effect waves-light btn blue darken-4" type="submit">
+               <button class="waves-effect waves-light btn blue darken-4" type="submit">
                     Войти
-          </button></p>
+          </button>
            </form>
-           <p ><a href="#"><b>Забыли пароль?</b></a></p>
+           <a href="#">Забыли пароль?</a>
     </div>
 
     <script src="js/logining.js"></script>

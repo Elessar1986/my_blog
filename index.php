@@ -16,7 +16,7 @@ if(isset($_SESSION['logined_administrator'])){
 }
 
 
-$articles = getAllArticles();
+$articles = getAllArticles(10);
 $top_art = getTopArticles();
 
 include_once "views/header.php";

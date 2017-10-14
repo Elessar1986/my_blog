@@ -1,10 +1,96 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
+
+
+@font-face {
+    font-family: Helvetica; /* Имя шрифта */
+    src: url(../fonts/helvetica/HelveticaNeueCyr-Roman.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Capt; /* Имя шрифта */
+    src: url(../fonts/capt/capt.otf); /* Путь к файлу со шрифтом */
+}
+
+
+@font-face {
+    font-family: Machine; /* Имя шрифта */
+    src: url(../fonts/machine/machine.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Jolly; /* Имя шрифта */
+    src: url(../fonts/jolly.ttf); /* Путь к файлу со шрифтом */
+}
+
+
+html {
+    line-height: 1.5;
+    font-family: "Machine";
+    font-weight: normal;
+    color: rgba(0,0,0,0.87);
+}
+
+
+p, ul{
+    font-family: "Jolly";
+    margin-left: 1rem auto;
+
+}
+
+.ul_error{
+    font-family: "Machine" !important;
+}
+
+.input-field label{
+    font-size: 1.3rem;
+}
+
+input[type=text]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=password]:not(.browser-default){
+    font-size: 1.5rem;
+    font-family: "Jolly";
+}
+
+textarea.materialize-textarea{
+    font-size: 1.1rem;
+    font-family: "Jolly";
+}
+
+
+blockquote{
+    font-family: "Jolly";
+    font-weight: bold;
+}
+
+h6, h5, h4, h3{
+    font-family: "Machine";
+    margin-left: 1rem;
+}
+
+.row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+h4{
+    margin-top: 0.1rem;
+}
+
+h5{
+    margin-top: 1rem;
+    margin-right: 0.2rem;
+}
+
+img{
+    width: 90%;
+    margin: 1rem;
+}
+
+.card-panel{
+    padding: 0.2rem;
+}
+
+
 
 .icon-block {
   padding: 0 15px;
@@ -84,12 +170,32 @@
   .parallaxHeight {
     height: 250px;
   }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+    h4 {
+        font-size: 1.4rem;
+    }
+    h5 {
+        font-size: 1.2rem;
+    }
+
 }
 
 @media only screen and (max-width: 993px) {
   .parallaxHeight {
     height: 300px;
   }
+    h5 {
+        font-size: 1.5rem;
+    }
 }
 
 
@@ -155,18 +261,27 @@
 .article_img {
     float: left;
     margin: 5px;
+    width: 20%;
+    height: auto;
+}
+
+.article_img_min{
+    float: left;
+    margin: 5px;
     width: 30%;
     height: auto;
 }
 
 .article_open {
-    
+    width: 20%;
+    margin-left: 70%;
+    margin-top: -1rem;
 }
 
-.article_group_header {
-    line-height: 30%;
-    
-}
+/*.article_group_header {*/
+    /*line-height: 30%;*/
+    /**/
+/*}*/
 
 .border_bottom {
     height: 130px;
@@ -189,11 +304,11 @@
 }
 
 .ava_img {
-    float: left;
-    margin: 5px;
+    float: right;
+    margin: 0.3rem;
     width: 30%;
     height: auto;
-    border: 1px solid;
+
 }
 
 .ava_img_comment {
@@ -222,15 +337,11 @@
 
 .article_div {
     min-height: 300px;
-}
-
-.user_info h4,.user_info h5,.user_info h3 {
-    display: inline-block;
+    padding: 1rem;
 }
 
 
 .Errors_registration_form{
-    font-family: "Cinematografica";
     font-size: 1.8rem;
     line-height: 90%;
     /*margin: 0.9rem 0 0.912rem 0;*/
@@ -248,3 +359,4 @@
 .comment_item{
 
 }
+
